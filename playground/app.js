@@ -421,7 +421,7 @@ class App extends Component {
     return (
       <div className="container-fluid">
         <div className="page-header">
-          <h1>react-jsonschema-form</h1>
+          <h1>OpenCert Certificate Creation Tool</h1>
           <div className="row">
             <div className="col-sm-8">
               <Selector onSelected={this.load} />
@@ -441,28 +441,26 @@ class App extends Component {
         </div>
         <div className="col-sm-7">
           <Editor
-            title="JSONSchema"
+            title="Certificate Schema"
             theme={editor}
             code={toJson(schema)}
             onChange={this.onSchemaEdited}
           />
+          <Editor
+            title="Certificate Information"
+            theme={editor}
+            code={toJson(formData)}
+            onChange={this.onFormDataEdited}
+          />
           <div className="row">
-            <div className="col-sm-6">
+            {/* <div className="col-sm-6">
               <Editor
                 title="UISchema"
                 theme={editor}
                 code={toJson(uiSchema)}
                 onChange={this.onUISchemaEdited}
               />
-            </div>
-            <div className="col-sm-6">
-              <Editor
-                title="formData"
-                theme={editor}
-                code={toJson(formData)}
-                onChange={this.onFormDataEdited}
-              />
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="col-sm-5">
@@ -493,7 +491,7 @@ class App extends Component {
               <div className="row">
                 <div className="col-sm-3">
                   <button className="btn btn-primary" type="submit">
-                    Submit
+                    Export as JSON
                   </button>
                 </div>
                 <div className="col-sm-9 text-right">
