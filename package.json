@@ -2,6 +2,7 @@
   "name": "react-jsonschema-form",
   "version": "1.5.0",
   "description": "A simple React component capable of building HTML forms out of a JSON schema.",
+  "homepage": "https://www.jasys.xyz/opencerts-web-tool",
   "scripts": {
     "build:lib": "rimraf lib && cross-env NODE_ENV=production babel -d lib/ src/",
     "build:dist": "rimraf dist && cross-env NODE_ENV=production webpack --config webpack.config.dist.js",
@@ -113,6 +114,5 @@
     "form",
     "json-schema"
   ],
-  "license": "Apache-2.0",
-  "homepage": "https://github.com/mozilla-services/react-jsonschema-form#readme"
+  "license": "Apache-2.0"
 }
